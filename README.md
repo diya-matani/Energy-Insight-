@@ -1,5 +1,5 @@
 # Energy Insight
-
+### [Go to Streamlit](https://energyinsight.streamlit.app/)
 **Sustainability Plans: You Make, We Save.**
 
 Energy Insight is a comprehensive Streamlit application designed for building energy analysis. It utilizes machine learning models to predict heating/cooling loads and appliance energy consumption, while integrating real-time weather data and an AI-powered expert assistant.

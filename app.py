@@ -19,18 +19,13 @@ st.set_page_config(
 # Custom CSS for modern look
 st.markdown("""
 <style>
-    .stApp {
-        background-color: #f8f9fa;
-    }
     .main-header {
         font-size: 2.5rem;
-        color: #2c3e50;
         text-align: center;
         margin-bottom: 1rem;
     }
     .sub-header {
         font-size: 1.5rem;
-        color: #34495e;
         margin-bottom: 1rem;
     }
     div.stButton > button:first-child {

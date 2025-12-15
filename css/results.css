@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    
+}
+
+.result-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.result-container p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.result-container p:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.result-container .analysis-heading {
+    font-weight: bold;
+}
+
+.result-container .suggestions-heading {
+    font-weight: bold;
+}
+
+.result-container .suggestion-item {
+    margin-bottom: 5px;
+}

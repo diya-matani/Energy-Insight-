@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #343a40; /* Dark gray header */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* Full width within the main section */
+    position: absolute;
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.question {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* height: 150px; */
+    width: 300px; /* Limiting the width for better readability */
+    /* width: 100%; */
+}
+
+.info-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: blue; /* Change color as needed */
+}
+
+/* Additional CSS for the definition tooltip */
+.info-tooltip {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+    width: 200px; /* Adjust width as needed */
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.question:hover .info-tooltip {
+    display: block;
+}
+
+/* Style the text inside the tooltip */
+.info-tooltip p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+}
+
+
+
+.pred-btn {
+    background-color: #fff;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 340px;
+}
+
+
+
+.question.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px); /* Adjusting input width to fit within padding */
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.next-btn,
+.prev-btn {
+    background-color: #007bff; /* Blue buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#resultContainer {
+    margin-top: 20px;
+    position: relative;
+    top: 30vh;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.form-pos {
+
+    margin-right: 20px; /* Add spacing between form and data representation */
+
+}
+
+.data-rep {
+    /* Your existing styles */
+    border: solid 2px green;
+}

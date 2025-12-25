@@ -15,8 +15,14 @@ def retrain():
         print(f"Loading {enb_path}...")
         df_enb = pd.read_csv(enb_path)
         
-        # Features X1 to X8
-        X_enb = df_enb[['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8']]
+        # Feature Engineering (from energy_insight.py)
+        # X9: Overall Width = (Wall Area / 4) / Overall Height
+        df_enb['X9'] = (df_enb['X3'] / 4) / df_enb['X5']
+        # X10: Perimeter = 2 * (Overall Height + Overall Width)
+        df_enb['X10'] = 2 * (df_enb['X5'] + df_enb['X9'])
+
+        # Features X1 to X10
+        X_enb = df_enb[['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8', 'X9', 'X10']]
         y_heat = df_enb['Y1']
         y_cool = df_enb['Y2']
         

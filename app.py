@@ -187,9 +187,16 @@ def main():
             submitted = st.form_submit_button("Predict Loads")
             
             if submitted:
+                # Feature Engineering
+                # X9: Overall Width
+                x9 = (wa / 4) / oh
+                # X10: Perimeter
+                x10 = 2 * (oh + x9)
+
                 input_data = pd.DataFrame({
                     'X1':[rc], 'X2':[sa], 'X3':[wa], 'X4':[ra], 
-                    'X5':[oh], 'X6':[orient], 'X7':[ga], 'X8':[gad]
+                    'X5':[oh], 'X6':[orient], 'X7':[ga], 'X8':[gad],
+                    'X9':[x9], 'X10':[x10]
                 })
                 
                 heat_pred = clf_heat.predict(input_data)[0]

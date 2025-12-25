@@ -144,9 +144,12 @@ def main():
         
         col1, col2 = st.columns(2)
         with col1:
-             st.info("Please enter your API keys in the sidebar to unlock all features.")
+             if not weather_api_key or not gemini_api_key:
+                 st.info("Please enter your API keys in the sidebar to unlock all features.")
+             else:
+                 st.success("API Keys loaded! You are ready to explore.")
         with col2:
-             st.image("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", use_column_width=True)
+             st.image("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", use_container_width=True)
 
 
     # --- WEATHER TAB ---

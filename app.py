@@ -94,8 +94,13 @@ def main():
         
         # API Keys
         st.subheader("API Keys")
-        weather_api_key = st.text_input("OpenWeatherMap API Key", type="password", help="Required for Weather tab")
-        gemini_api_key = st.text_input("Google Gemini API Key", type="password", help="Required for AI Expert tab")
+        
+        # Auto-load from secrets if available
+        default_weather_key = st.secrets["OPENWEATHER_API_KEY"] if "OPENWEATHER_API_KEY" in st.secrets else ""
+        default_gemini_key = st.secrets["GOOGLE_GEMINI_API_KEY"] if "GOOGLE_GEMINI_API_KEY" in st.secrets else ""
+
+        weather_api_key = st.text_input("OpenWeatherMap API Key", value=default_weather_key, type="password", help="Required for Weather tab")
+        gemini_api_key = st.text_input("Google Gemini API Key", value=default_gemini_key, type="password", help="Required for AI Expert tab")
         
         st.markdown("---")
         st.markdown("### About")
